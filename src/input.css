@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* THIS LINE IS CRITICAL: It tells Tailwind to look at your PHP files in the folder above */
+@source "../**/*.php";
+
+@theme {
+  /* Brand Colors */
+  --color-church-blue: #2b4494;
+  --color-church-red: #ed1c24;
+  --color-church-gold: #a68966;
+  --color-church-cream: #fdfcfb;
+
+  /* Fonts */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@utility btn-premium {
+  @apply bg-church-blue text-white px-8 py-3 rounded-full font-bold uppercase tracking-wider 
+         transition-all duration-300 hover:bg-church-red hover:shadow-lg hover:shadow-red-500/20 
+         active:scale-95 cursor-pointer inline-block;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply selection:bg-church-gold selection:text-white;
+}
+
+/* Dynamic Background Animations */
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes gradient-y {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: center top;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: center bottom;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(-5deg);
+  }
+}
+
+@keyframes float-slow-delayed {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+@keyframes float-reverse-delayed {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(15px) rotate(-3deg);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right-delayed {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+.animate-gradient-y {
+  animation: gradient-y 20s ease infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 10s ease-in-out infinite;
+}
+
+.animate-float-slow-delayed {
+  animation: float-slow-delayed 14s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-reverse-delayed {
+  animation: float-reverse-delayed 11s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-slide-right {
+  animation: slide-right 25s linear infinite;
+}
+
+.animate-slide-left {
+  animation: slide-left 30s linear infinite;
+  animation-delay: 5s;
+}
+
+.animate-slide-right-delayed {
+  animation: slide-right-delayed 28s linear infinite;
+  animation-delay: 8s;
+}
