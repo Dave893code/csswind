@@ -1,51 +1,478 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <body class="bg-church-cream font-sans antialiased" style="margin:0; padding:0;">
-
-
-
-
-    <!-- MAIN PAGE WRAPPER: centers all content with blank space on left/right -->
-    <div class="page-center" style="max-width: 1400px; margin: 0 auto; background: inherit;">
-
-        <!-- Hero Section with Video Background -->
-        <header class="relative min-h-screen flex items-center overflow-hidden pt-16 rounded-b-3xl">
-            <div class="absolute inset-0 z-0 rounded-b-3xl overflow-hidden">
-                <video autoplay muted loop playsinline poster="/csswind/src/assets/fallback-image.jpg" class="w-full h-full object-cover">
-                    <source src="/csswind/src/assets/background-video.mp4" type="video/mp4">
-                    <img src="/csswind/src/assets/fallback-image.jpg" class="w-full h-full object-cover" alt="Church Background">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-r from-church-blue/80 to-church-blue/40 backdrop-blur-[2px] rounded-b-3xl"></div>
+    <header style="background: url('https://images.unsplash.com/photo-1548625361-195feee742f1?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1rem; overflow: hidden; width: 100%;">
+        <div class="tv-frame">
+            <div class="glow-wrap">
+                <div class="particle-core"></div>
+                <div class="particle-shimmer"></div>
             </div>
 
-            <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
-                <span class="text-church-gold font-bold uppercase tracking-[0.4em] text-xs mb-6 inline-block animate-pulse border border-church-gold/30 rounded-full px-4 py-2 backdrop-blur-sm">
-                    Faith • Hope • Love
-                </span>
-                <h1 class="text-5xl md:text-8xl font-serif text-white mb-8 leading-[1.1] drop-shadow-2xl">
-                    Touching Lives through <br>
-                    <span class="text-church-gold italic font-normal">Covenant & Grace</span>
-                </h1>
-                <p class="text-blue-50 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed backdrop-blur-sm bg-black/20 rounded-2xl p-4">
-                    Welcome to Gloryland Chapel. Experience a vibrant community dedicated to the Word of God and the warmth of His presence.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                    <a href="../index.php?page=watch" class="bg-church-gold text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-church-blue transition-all shadow-xl hover:scale-105 transform duration-300">
-                        Watch Our Service
-                    </a>
-                    <a href="index.php?page=vision" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-church-blue transition-all hover:scale-105 transform duration-300">
-                        Our Vision
-                    </a>
-                </div> 
-            </div>
+            <div class="tv-screen">
+                <div id="hero-slider" style="position: absolute; inset: 0; z-index: 0;">
+                    <div class="hero-slide active">
+                        <img src="https://media.istockphoto.com/id/1500817568/photo/christ-on-the-mount-with-raised-hands-old-scroll.webp?a=1&b=1&s=612x612&w=0&k=20&c=JHpRxRsKLR9uy-ki9bBeofLVXM3lbdFfgCE2elSqaLk=" alt="Slide 1">
+                    </div>
+                    <div class="hero-slide blur-effect">
+                        <img src="/csswind/src/assets/hero2.webp" alt="Slide 2">
+                    </div>
+                    <div class="hero-slide blur-effect">
+                        <img src="/csswind/src/assets/hero3.webp" alt="Slide 3">
+                    </div>
+                    <div class="hero-slide blur-effect">
+                        <img src="/csswind/src/assets/hero4.webp" alt="Slide 4">
+                    </div>
+                    <div class="hero-slide blur-effect">
+                        <img src="/csswind/src/assets/hero5.webp" alt="Slide 5">
+                    </div>
+                    <div class="hero-slide blur-effect">
+                        <img src="/csswind/src/assets/hero6.webp" alt="Slide 6">
+                    </div>
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(45,10,10,0.7) 0%, transparent 40%, rgba(0,26,53,0.95) 100%); z-index: 1;"></div>
+                </div>
 
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-                    <div class="w-1 h-3 bg-white rounded-full mt-2"></div>
+                <div class="tv-content">
+                    <span class="badge">Faith • Hope • Love</span>
+                    <h1>Touching Lives<br><span class="accent">Covenant & Grace</span></h1>
+                    <p>Welcome to <strong>Gloryvine Covenant Ministries</strong>. Experience a vibrant community dedicated to the Word of God and the warmth of His presence.</p>
+
+                    <div class="btn-group">
+                        <a href="index.php?page=watch" class="btn btn-wine">Watch Our Service</a>
+                        <a href="index.php?page=vision" class="btn btn-outline">Our Vision</a>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
+
+    </header>
+    <section class="floating-cards-container">
+        <div class="cards-track">
+            <div class="word-card">
+                <i class="fas fa-scroll"></i>
+                <span>Revelation</span>
+            </div>
+            <div class="word-card alt">
+                <i class="fas fa-wind"></i>
+                <span>Spirit-Led</span>
+            </div>
+            <div class="word-card">
+                <i class="fas fa-shield-alt"></i>
+                <span>Divine Armor</span>
+            </div>
+            <div class="word-card alt">
+                <i class="fas fa-gem"></i>
+                <span>Precious Grace</span>
+            </div>
+            <div class="word-card">
+                <i class="fas fa-anchor"></i>
+                <span>Steadfast Hope</span>
+            </div>
+            <div class="word-card alt">
+                <i class="fas fa-sun"></i>
+                <span>Eternal Light</span>
+            </div>
+            <div class="word-card">
+                <i class="fas fa-mountain"></i>
+                <span>Unshakable Faith</span>
+            </div>
+            <div class="word-card alt">
+                <i class="fas fa-fire"></i>
+                <span>Holy Fire</span>
+            </div>
+
+            <div class="word-card" aria-hidden="true">
+                <i class="fas fa-scroll"></i>
+                <span>Revelation</span>
+            </div>
+            <div class="word-card alt" aria-hidden="true">
+                <i class="fas fa-wind"></i>
+                <span>Spirit-Led</span>
+            </div>
+            <div class="word-card" aria-hidden="true">
+                <i class="fas fa-shield-alt"></i>
+                <span>Divine Armor</span>
+            </div>
+            <div class="word-card alt" aria-hidden="true">
+                <i class="fas fa-gem"></i>
+                <span>Precious Grace</span>
+            </div>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .floating-cards-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 40px 0;
+            background: transparent;
+            /* Fades the boxes at the edges */
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .cards-track {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            animation: boxScroll 35s linear infinite;
+        }
+
+        /* THE BOX (The "Moving Boxes" you requested) */
+        .word-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 35px;
+            background: rgba(128, 0, 32, 0.1);
+            /* Deep Wine Tint */
+            border: 2px solid #800020;
+            /* Deep Wine Border */
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* Alternate Box Style (White) */
+        .word-card.alt {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* THE ICONS (Bigger as requested) */
+        .word-card i {
+            font-size: 2.2rem;
+            /* Larger icon size */
+            color: #800020;
+        }
+
+        .word-card.alt i {
+            color: #ffffff;
+        }
+
+        /* THE TEXT */
+        .word-card span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            color: #800020;
+        }
+
+        .word-card.alt span {
+            color: #ffffff;
+        }
+
+        @keyframes boxScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Hover effect to make it feel premium */
+        .word-card:hover {
+            transform: translateY(-5px);
+            background: rgba(128, 0, 32, 0.2);
+            cursor: pointer;
+        }
+
+        /* Mobile scaling */
+        @media (max-width: 768px) {
+            .word-card {
+                padding: 10px 20px;
+                gap: 15px;
+            }
+
+            .word-card i {
+                font-size: 1.6rem;
+            }
+
+            .word-card span {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <style>
+        /* 1. TV FRAME - Wider & Thicker Border */
+        .tv-frame {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            /* Maximum Cinematic Width */
+            height: 600px;
+            background: #000;
+            border-radius: 60px;
+            /* More rounded for premium feel */
+            box-shadow: 0 0 120px rgba(0, 0, 0, 0.9);
+            border: 20px solid #001a35;
+            /* Much thicker frame */
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .tv-frame {
+                height: 800px;
+            }
+        }
+
+        /* 2. UPGRADED PARTICLES */
+        .glow-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Base Rotating Light */
+        .particle-core::before {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, #D4AF37, #800020, #FFFFFF, transparent 60%);
+            animation: rotateGlow 5s linear infinite;
+            filter: blur(50px) brightness(1.5);
+        }
+
+        /* Sparkle Shimmer Layer */
+        .particle-shimmer::after {
+            content: '';
+            position: absolute;
+            inset: -20%;
+            background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            animation: shimmer 10s ease-in-out infinite alternate;
+            filter: blur(1px);
+        }
+
+        .glow-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 15px;
+            /* Aligns with thicker border */
+            background: #001a35;
+            border-radius: 45px;
+        }
+
+        @keyframes rotateGlow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.1;
+            }
+
+            100% {
+                transform: translateY(-20px) scale(1.2);
+                opacity: 0.4;
+            }
+        }
+
+        /* 3. THE SCREEN */
+        .tv-screen {
+            position: absolute;
+            inset: 22px;
+            /* Slightly more inset for the thicker frame */
+            background: #000;
+            border-radius: 40px;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blur-effect img {
+            filter: blur(6px);
+            transform: scale(1.15);
+        }
+
+        /* 4. CONTENT STYLING */
+        .tv-content {
+            position: absolute;
+            inset: 0;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+            text-align: center;
+            color: white;
+        }
+
+        .badge {
+            color: #D4AF37;
+            text-transform: uppercase;
+            letter-spacing: 0.6em;
+            font-size: 12px;
+            font-weight: 900;
+            padding: 12px 30px;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 50px;
+            margin-bottom: 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            animation: pulse 2.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        .tv-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        @media (min-width: 1024px) {
+            .tv-content h1 {
+                font-size: 6.5rem;
+            }
+        }
+
+        .accent {
+            color: #800020;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .tv-content p {
+            font-family: sans-serif;
+            max-width: 750px;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            opacity: 0.95;
+        }
+
+        /* BUTTONS */
+        .btn-group {
+            display: flex;
+            gap: 2rem;
+            z-index: 30;
+        }
+
+        .btn {
+            padding: 20px 50px;
+            border-radius: 60px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-wine {
+            background: #800020;
+            color: white;
+            border: 1px solid #a00028;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #001a35;
+        }
+
+        @media (max-width: 768px) {
+            .tv-frame {
+                border-radius: 30px;
+                border-width: 10px;
+            }
+
+            .tv-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .btn {
+                text-align: center;
+                padding: 16px;
+            }
+        }
+    </style>
+
+    <script>
+        (function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            let current = 0;
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[current].classList.remove('active');
+                    current = (current + 1) % slides.length;
+                    slides[current].classList.add('active');
+                }, 6000);
+            }
+        })();
+    </script>
+    <!-- MAIN PAGE WRAPPER: centers all content with blank space on left/right -->
+    <div class="page-center" style="max-width: 1600px; margin: 0 auto; background: inherit;">
+
+
 
         <!-- The Great Commission Section -->
         <!-- The Great Commission Section - Apple‑styled bold typography, globe as background -->
@@ -70,7 +497,7 @@
                 <div class="relative z-10 max-w-6xl mx-auto px-8 py-32">
                     <!-- Top Text - Centered above globe -->
                     <div class="text-center mb-32">
-                        <span class="text-white font-black tracking-[0.3em] text-sm uppercase mb-6 inline-block border-b-2 border-white/20 pb-3"
+                        <span class="text-white/70 font-black tracking-[0.3em] text-sm uppercase mb-6 inline-block border-b-2 border-white/20 pb-3"
                             style="font-weight: 900; letter-spacing: 0.3em;">THE GREAT COMMISSION</span>
                         <h1 class="font-sans text-white leading-[1.05] tracking-tight">
                             <span class="block text-6xl md:text-8xl lg:text-9xl font-black drop-shadow-2xl"
@@ -105,17 +532,13 @@
                                 <span class="text-[#D4AF37] italic font-black" style="font-weight: 900;">Godly</span>
                                 <span class="font-black"> Generation</span>
                             </h2>
-                            <p class="text-white text-xl mb-12 leading-relaxed border-l-8 border-red-600 pl-10 bg-gradient-to-r from-blue-950/80 to-white/40 py-8 rounded-[3rem] border-r border-white/10 shadow-2xl backdrop-blur-md"
+                            <p class="text-white/80 text-lg mb-8 leading-relaxed border-l-2 border-red-600 pl-6 bg-white/5 py-4 rounded-r-xl"
                                 style="font-weight: 500;">
-
-                                <span class="italic opacity-90 block mb-4">"For I have made a covenant with my chosen..."</span>
-
-                                <span class="inline-block bg-[#D4AF37] text-black px-4 py-1 rounded-full font-black tracking-[0.2em] text-xs uppercase shadow-lg">
-                                    Psalm 89:3
-                                </span>
+                                <span class="italic">"For I have made a covenant with my chosen..."</span> —
+                                <span class="text-white font-black tracking-widest text-xs uppercase" style="font-weight: 900;">Psalm 89:3</span>
                             </p>
-                            <a href="index.php?page=history
-                                class=" inline-block px-10 py-4 bg-red-600 text-red-800 font-black uppercase tracking-widest rounded-xl hover:bg-[#D4AF37] hover:text-white transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+                            <a href="index.php?page=history"
+                                class="inline-block px-10 py-4 bg-white text-red-600 font-black uppercase tracking-widest rounded-xl hover:bg-[#D4AF37] hover:text-white transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 transform"
                                 style="font-weight: 900;">
                                 Read Our History
                             </a>
@@ -449,7 +872,6 @@
                 </div>
             </div>
         </section>
-
 
     </div> <!-- end page-center wrapper -->
 
