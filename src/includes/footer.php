@@ -1,3 +1,4 @@
+
 <footer class="bg-white pt-24 pb-12 px-4 md:px-16">
 
     <div class="max-w-7xl mx-auto rounded-t-[60px] md:rounded-t-[100px] p-12 md:p-20 relative overflow-hidden"
@@ -11,7 +12,7 @@
                         <img src="/csswind/src/assets/logo.JPG" alt="Logo" class="h-12 w-12 rounded-full bg-white p-1">
                         <span class="text-white font-black text-2xl tracking-tighter uppercase">Gloryvine</span>
                     </div>
-                    <p class="text-white/60 text-sm leading-relaxed max-w-[280px]">
+                    <p class="text-white/60 text-sm leading-relamax-w-[280px]">
                         Raising a Godly generation through the power of the Word and the unshakeable spirit of covenant.
                     </p>
                     <div class="flex gap-3 pt-2">

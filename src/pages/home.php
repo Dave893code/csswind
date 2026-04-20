@@ -13,19 +13,19 @@
                     <div class="hero-slide active">
                         <img src="https://media.istockphoto.com/id/1500817568/photo/christ-on-the-mount-with-raised-hands-old-scroll.webp?a=1&b=1&s=612x612&w=0&k=20&c=JHpRxRsKLR9uy-ki9bBeofLVXM3lbdFfgCE2elSqaLk=" alt="Slide 1">
                     </div>
-                    <div class="hero-slide blur-effect">
+                    <div class="hero-slide ">
                         <img src="/csswind/src/assets/hero2.webp" alt="Slide 2">
                     </div>
-                    <div class="hero-slide blur-effect">
+                    <div class="hero-slide ">
                         <img src="/csswind/src/assets/hero3.webp" alt="Slide 3">
                     </div>
-                    <div class="hero-slide blur-effect">
+                    <div class="hero-slide ">
                         <img src="/csswind/src/assets/hero4.webp" alt="Slide 4">
                     </div>
-                    <div class="hero-slide blur-effect">
+                    <div class="hero-slide ">
                         <img src="/csswind/src/assets/hero5.webp" alt="Slide 5">
                     </div>
-                    <div class="hero-slide blur-effect">
+                    <div class="hero-slide ">
                         <img src="/csswind/src/assets/hero6.webp" alt="Slide 6">
                     </div>
                     <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(45,10,10,0.7) 0%, transparent 40%, rgba(0,26,53,0.95) 100%); z-index: 1;"></div>
@@ -42,8 +42,8 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </header>
     <section class="floating-cards-container">
         <div class="cards-track">
@@ -130,7 +130,7 @@
             border: 2px solid #800020;
             /* Deep Wine Border */
             border-radius: 12px;
-            backdrop-filter: blur(10px);
+            /* backdrop-filter: blur(10px); */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
@@ -242,6 +242,7 @@
             animation: rotateGlow 5s linear infinite;
             filter: blur(50px) brightness(1.5);
         }
+
 
         /* Sparkle Shimmer Layer */
         .particle-shimmer::after {
@@ -378,7 +379,7 @@
         }
 
         .accent {
-            color: #800020;
+            color: #ff0000;
             font-style: italic;
             font-weight: 300;
         }
@@ -418,7 +419,7 @@
         }
 
         .btn-wine {
-            background: #800020;
+            background: #ff0000;
             color: white;
             border: 1px solid #a00028;
         }
@@ -471,11 +472,7 @@
     </script>
     <!-- MAIN PAGE WRAPPER: centers all content with blank space on left/right -->
     <div class="page-center" style="max-width: 1600px; margin: 0 auto; background: inherit;">
-
-
-
         <!-- The Great Commission Section -->
-        <!-- The Great Commission Section - Apple‑styled bold typography, globe as background -->
         <div class="bg-black py-24 px-4 md:px-20 relative overflow-visible rounded-3xl my-8">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[75%] bg-red-600/20 rounded-full blur-[160px] pointer-events-none z-0"></div>
 
@@ -493,36 +490,36 @@
                     <canvas id="particleCanvas" class="w-full h-full object-cover pointer-events-auto" style="opacity: 0.85;"></canvas>
                 </div>
 
-                <!-- Content Overlay - Apple Style Bold Typography -->
+
                 <div class="relative z-10 max-w-6xl mx-auto px-8 py-32">
-                    <!-- Top Text - Centered above globe -->
+
                     <div class="text-center mb-32">
-                        <span class="text-white/70 font-black tracking-[0.3em] text-sm uppercase mb-6 inline-block border-b-2 border-white/20 pb-3"
+                        <span class="text-white font-black tracking-[0.3em] text-sm uppercase mb-6 inline-block border-b-2 border-white/20 pb-3"
                             style="font-weight: 900; letter-spacing: 0.3em;">THE GREAT COMMISSION</span>
                         <h1 class="font-sans text-white leading-[1.05] tracking-tight">
                             <span class="block text-6xl md:text-8xl lg:text-9xl font-black drop-shadow-2xl"
-                                style="font-weight: 900;">Word to the</span>
-                            <span class="block text-7xl md:text-9xl lg:text-[10rem] text-[#D4AF37] font-black italic mt-4 drop-shadow-[0_10px_30px_rgba(212,175,55,0.6)]"
+                                style=" font-weight: 900;">Word to the</span>
+                            <span class="block text-10x2 md:text-9xl lg:text-[10rem] text-[#D4AF37] font-black italic mt-4 drop-shadow-[0_10px_30px_rgba(212,175,55,0.6)]"
                                 style="font-weight: 900;">World</span>
                         </h1>
                     </div>
 
-                    <!-- Bottom Two-Column Section -->
+
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-24 border-t border-white/10">
-                        <!-- Image Column -->
+
                         <div class="relative group">
                             <div class="absolute -bottom-4 -left-4 w-1/2 h-1/2 border-l-2 border-b-2 border-white/30 rounded-bl-3xl group-hover:border-church-gold transition-colors duration-500"></div>
                             <div class="relative z-10 overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
                                 <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2073" alt="Worship"
                                     class="w-full h-auto object-cover grayscale-[0.1] group-hover:scale-110 transition-transform duration-700">
                             </div>
-                            <!-- Subtle "Worship" label over image -->
+
                             <div class="absolute bottom-6 left-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-black uppercase tracking-wider z-20">
                                 Worship
                             </div>
                         </div>
 
-                        <!-- Text Column - Apple Style Bold -->
+
                         <div class="lg:pl-6">
                             <div class="inline-flex items-center gap-2 bg-gradient-to-r from-church-gold/40 to-transparent px-5 py-2 rounded-full mb-6 border-l-4 border-church-gold">
                                 <span class="text-church-gold font-black text-xs uppercase tracking-[0.25em]" style="font-weight: 900;">PRAYER MINISTRY+</span>
@@ -548,7 +545,7 @@
             </section>
         </div>
 
-        <!-- Keep the grain-overlay style and particle script (same as before, but improved for bold design) -->
+
         <style>
             .grain-overlay {
                 position: absolute;
@@ -681,6 +678,160 @@
                 animate();
             })();
         </script>
+        <section class="floating-cards-container">
+            <div class="cards-track">
+                <div class="word-card">
+                    <i class="fas fa-scroll"></i>
+                    <span>Revelation</span>
+                </div>
+                <div class="word-card alt">
+                    <i class="fas fa-wind"></i>
+                    <span>Spirit-Led</span>
+                </div>
+                <div class="word-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Divine Armor</span>
+                </div>
+                <div class="word-card alt">
+                    <i class="fas fa-gem"></i>
+                    <span>Precious Grace</span>
+                </div>
+                <div class="word-card">
+                    <i class="fas fa-anchor"></i>
+                    <span>Steadfast Hope</span>
+                </div>
+                <div class="word-card alt">
+                    <i class="fas fa-sun"></i>
+                    <span>Eternal Light</span>
+                </div>
+                <div class="word-card">
+                    <i class="fas fa-mountain"></i>
+                    <span>Unshakable Faith</span>
+                </div>
+                <div class="word-card alt">
+                    <i class="fas fa-fire"></i>
+                    <span>Holy Fire</span>
+                </div>
+
+                <div class="word-card" aria-hidden="true">
+                    <i class="fas fa-scroll"></i>
+                    <span>Revelation</span>
+                </div>
+                <div class="word-card alt" aria-hidden="true">
+                    <i class="fas fa-wind"></i>
+                    <span>Spirit-Led</span>
+                </div>
+                <div class="word-card" aria-hidden="true">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Divine Armor</span>
+                </div>
+                <div class="word-card alt" aria-hidden="true">
+                    <i class="fas fa-gem"></i>
+                    <span>Precious Grace</span>
+                </div>
+            </div>
+        </section>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <style>
+            .floating-cards-container {
+                width: 100%;
+                overflow: hidden;
+                padding: 40px 0;
+                background: transparent;
+                /* Fades the boxes at the edges */
+                mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            }
+
+            .cards-track {
+                display: flex;
+                gap: 30px;
+                width: max-content;
+                animation: boxScroll 35s linear infinite;
+            }
+
+            /* THE BOX (The "Moving Boxes" you requested) */
+            .word-card {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 15px 35px;
+                background: rgba(128, 0, 32, 0.1);
+                /* Deep Wine Tint */
+                border: 2px solid #800020;
+                /* Deep Wine Border */
+                border-radius: 12px;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+            }
+
+            /* Alternate Box Style (White) */
+            .word-card.alt {
+                background: rgba(255, 255, 255, 0.05);
+                border: 2px solid rgba(255, 255, 255, 0.6);
+            }
+
+            /* THE ICONS (Bigger as requested) */
+            .word-card i {
+                font-size: 2.2rem;
+                /* Larger icon size */
+                color: #800020;
+            }
+
+            .word-card.alt i {
+                color: #ffffff;
+            }
+
+            /* THE TEXT */
+            .word-card span {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 1.1rem;
+                color: #800020;
+            }
+
+            .word-card.alt span {
+                color: #ffffff;
+            }
+
+            @keyframes boxScroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* Hover effect to make it feel premium */
+            .word-card:hover {
+                transform: translateY(-5px);
+                background: rgba(128, 0, 32, 0.2);
+                cursor: pointer;
+            }
+
+            /* Mobile scaling */
+            @media (max-width: 768px) {
+                .word-card {
+                    padding: 10px 20px;
+                    gap: 15px;
+                }
+
+                .word-card i {
+                    font-size: 1.6rem;
+                }
+
+                .word-card span {
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
 
         <!-- Fellowship Section -->
         <section id="visit" class="py-20 bg-church-red text-white overflow-hidden relative rounded-3xl my-8">
