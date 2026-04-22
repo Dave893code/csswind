@@ -106,60 +106,54 @@
             width: 100%;
             overflow: hidden;
             padding: 40px 0;
-            background: transparent;
-            /* Fades the boxes at the edges */
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            background: rgba(1, 18, 45, 0.08);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
         }
 
         .cards-track {
             display: flex;
-            gap: 30px;
+            gap: 24px;
             width: max-content;
-            animation: boxScroll 35s linear infinite;
+            animation: boxScroll 32s linear infinite;
         }
 
-        /* THE BOX (The "Moving Boxes" you requested) */
         .word-card {
             display: flex;
             align-items: center;
             gap: 20px;
-            padding: 15px 35px;
-            background: rgba(128, 0, 32, 0.1);
-            /* Deep Wine Tint */
-            border: 2px solid #800020;
-            /* Deep Wine Border */
-            border-radius: 12px;
-            /* backdrop-filter: blur(10px); */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            padding: 18px 36px;
+            background: rgba(220, 38, 38, 0.18);
+            border: 2px solid rgba(220, 38, 38, 0.8);
+            border-radius: 16px;
+            color: #ffffff;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
-        /* Alternate Box Style (White) */
         .word-card.alt {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.6);
+            background: linear-gradient(135deg, rgba(10, 30, 75, 0.98), rgba(7, 20, 58, 0.92));
+            border: 2px solid rgba(59, 130, 246, 0.95);
+            box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15), 0 24px 60px rgba(14, 64, 138, 0.45);
+            backdrop-filter: saturate(180%) blur(0.8px);
         }
 
-        /* THE ICONS (Bigger as requested) */
         .word-card i {
             font-size: 2.2rem;
-            /* Larger icon size */
-            color: #800020;
+            color: #fee2e2;
         }
 
         .word-card.alt i {
-            color: #ffffff;
+            color: #bfdbfe;
         }
 
-        /* THE TEXT */
         .word-card span {
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.6px;
             font-size: 1.1rem;
-            color: #800020;
+            color: #ffffff;
         }
 
         .word-card.alt span {
@@ -176,26 +170,23 @@
             }
         }
 
-        /* Hover effect to make it feel premium */
         .word-card:hover {
-            transform: translateY(-5px);
-            background: rgba(128, 0, 32, 0.2);
-            cursor: pointer;
+            transform: translateY(-6px);
+            box-shadow: 0 26px 50px rgba(0, 0, 0, 0.25);
         }
 
-        /* Mobile scaling */
         @media (max-width: 768px) {
             .word-card {
-                padding: 10px 20px;
-                gap: 15px;
+                padding: 14px 24px;
+                gap: 16px;
             }
 
             .word-card i {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
             }
 
             .word-card span {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -435,24 +426,98 @@
             color: #001a35;
         }
 
+        @media (max-width: 1024px) {
+            .tv-frame {
+                height: 720px;
+            }
+
+            .tv-content {
+                padding: 3rem;
+            }
+
+            .tv-content h1 {
+                font-size: 4.5rem;
+            }
+
+            .tv-content p {
+                font-size: 1.1rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .tv-frame {
                 border-radius: 30px;
                 border-width: 10px;
+                height: auto;
+                min-height: 520px;
+                aspect-ratio: 16 / 9;
+            }
+
+            .tv-content {
+                padding: 2rem;
+            }
+
+            .badge {
+                font-size: 11px;
+                padding: 10px 24px;
+                margin-bottom: 1.5rem;
             }
 
             .tv-content h1 {
-                font-size: 2.8rem;
+                font-size: 2.6rem;
+                line-height: 1.1;
+            }
+
+            .tv-content p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+                max-width: 100%;
             }
 
             .btn-group {
                 flex-direction: column;
-                width: 90%;
+                width: 100%;
+                gap: 1rem;
             }
 
             .btn {
+                width: 100%;
                 text-align: center;
-                padding: 16px;
+                padding: 16px 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .tv-frame {
+                min-height: 440px;
+                border-radius: 24px;
+                border-width: 8px;
+            }
+
+            .tv-content {
+                padding: 1.25rem;
+            }
+
+            .tv-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .btn {
+                padding: 14px 18px;
+                font-size: 0.9rem;
+            }
+
+            .word-card {
+                padding: 10px 18px;
+                gap: 14px;
+            }
+
+            .word-card i {
+                font-size: 1.5rem;
+            }
+
+            .word-card span {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -496,10 +561,10 @@
                     <div class="text-center mb-32">
                         <span class="text-white font-black tracking-[0.3em] text-sm uppercase mb-6 inline-block border-b-2 border-white/20 pb-3"
                             style="font-weight: 900; letter-spacing: 0.3em;">THE GREAT COMMISSION</span>
-                        <h1 class="font-sans text-white leading-[1.05] tracking-tight">
-                            <span class="block text-6xl md:text-8xl lg:text-9xl font-black drop-shadow-2xl"
-                                style=" font-weight: 900;">Word to the</span>
-                            <span class="block text-10x2 md:text-9xl lg:text-[10rem] text-[#D4AF37] font-black italic mt-4 drop-shadow-[0_10px_30px_rgba(212,175,55,0.6)]"
+                        <h1 class="font-sans text-white leading-tight tracking-tight max-w-4xl mx-auto">
+                            <span class="block text-5xl md:text-6xl lg:text-7xl font-black drop-shadow-2xl"
+                                style="font-weight: 900;">Word to the</span>
+                            <span class="block text-7xl md:text-8xl lg:text-[6.5rem] text-[#D4AF37] font-black italic mt-4 drop-shadow-[0_10px_30px_rgba(212,175,55,0.6)]"
                                 style="font-weight: 900;">World</span>
                         </h1>
                     </div>
@@ -739,60 +804,54 @@
                 width: 100%;
                 overflow: hidden;
                 padding: 40px 0;
-                background: transparent;
-                /* Fades the boxes at the edges */
-                mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-                -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                background: rgba(1, 18, 45, 0.08);
+                mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
             }
 
             .cards-track {
                 display: flex;
-                gap: 30px;
+                gap: 24px;
                 width: max-content;
-                animation: boxScroll 35s linear infinite;
+                animation: boxScroll 32s linear infinite;
             }
 
-            /* THE BOX (The "Moving Boxes" you requested) */
             .word-card {
                 display: flex;
                 align-items: center;
                 gap: 20px;
-                padding: 15px 35px;
-                background: rgba(128, 0, 32, 0.1);
-                /* Deep Wine Tint */
-                border: 2px solid #800020;
-                /* Deep Wine Border */
-                border-radius: 12px;
-                backdrop-filter: blur(10px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                transition: transform 0.3s ease;
+                padding: 18px 36px;
+                background: rgba(220, 38, 38, 0.18);
+                border: 2px solid rgba(220, 38, 38, 0.8);
+                border-radius: 16px;
+                color: #ffffff;
+                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+                transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
             }
 
-            /* Alternate Box Style (White) */
             .word-card.alt {
-                background: rgba(255, 255, 255, 0.05);
-                border: 2px solid rgba(255, 255, 255, 0.6);
+                background: linear-gradient(135deg, rgba(10, 30, 75, 0.98), rgba(7, 20, 58, 0.92));
+                border: 2px solid rgba(59, 130, 246, 0.95);
+                box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15), 0 24px 60px rgba(14, 64, 138, 0.45);
+                backdrop-filter: saturate(180%) blur(0.8px);
             }
 
-            /* THE ICONS (Bigger as requested) */
             .word-card i {
                 font-size: 2.2rem;
-                /* Larger icon size */
-                color: #800020;
+                color: #fee2e2;
             }
 
             .word-card.alt i {
-                color: #ffffff;
+                color: #bfdbfe;
             }
 
-            /* THE TEXT */
             .word-card span {
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 900;
                 text-transform: uppercase;
-                letter-spacing: 2px;
+                letter-spacing: 1.6px;
                 font-size: 1.1rem;
-                color: #800020;
+                color: #ffffff;
             }
 
             .word-card.alt span {
@@ -809,26 +868,23 @@
                 }
             }
 
-            /* Hover effect to make it feel premium */
             .word-card:hover {
-                transform: translateY(-5px);
-                background: rgba(128, 0, 32, 0.2);
-                cursor: pointer;
+                transform: translateY(-6px);
+                box-shadow: 0 26px 50px rgba(0, 0, 0, 0.25);
             }
 
-            /* Mobile scaling */
             @media (max-width: 768px) {
                 .word-card {
-                    padding: 10px 20px;
-                    gap: 15px;
+                    padding: 14px 24px;
+                    gap: 16px;
                 }
 
                 .word-card i {
-                    font-size: 1.6rem;
+                    font-size: 1.7rem;
                 }
 
                 .word-card span {
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                 }
             }
         </style>
@@ -991,21 +1047,22 @@
 
                     <div class="bg-church-cream p-8 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300">
                         <h4 class="font-bold text-2xl text-church-blue mb-6 text-center">Share Your Prayer Request</h4>
-                        <form action="" method="POST" class="space-y-4">
+                        <form action="src/includes/process_prayer.php" method="POST" class="space-y-4">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input type="text" name="name" placeholder="Your Name" required
-                                    class="w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none shadow-sm">
+                                    class="prayer-request-input w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none shadow-sm">
                                 <input type="email" name="email" placeholder="Email Address" required
-                                    class="w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none shadow-sm">
+                                    class="prayer-request-input w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none shadow-sm">
                             </div>
-                            <select name="request_type" class="w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none text-gray-600 shadow-sm">
-                                <option>Prayer Request</option>
-                                <option>Testimony</option>
-                                <option>Counseling</option>
-                                <option>Thanksgiving</option>
-                            </select>
+                            <div class="prayer-type-cards">
+                                <button type="button" class="prayer-type-pill active" data-value="Prayer Request">Prayer Request</button>
+                                <button type="button" class="prayer-type-pill" data-value="Testimony">Testimony</button>
+                                <button type="button" class="prayer-type-pill" data-value="Counseling">Counseling</button>
+                                <button type="button" class="prayer-type-pill" data-value="Thanksgiving">Thanksgiving</button>
+                            </div>
+                            <input type="hidden" name="type" id="request_type_input" value="Prayer Request">
                             <textarea name="message" placeholder="Share your heart with us..." rows="4" required
-                                class="w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none shadow-sm resize-none"></textarea>
+                                class="prayer-request-textarea w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-church-gold outline-none shadow-sm resize-none"></textarea>
                             <button type="submit" class="w-full bg-church-blue text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-church-gold transition-all shadow-xl shadow-blue-900/20 hover:scale-105 transform duration-300">
                                 Send Prayer Request
                             </button>
@@ -1026,10 +1083,82 @@
 
     </div> <!-- end page-center wrapper -->
 
+    <style>
+        .prayer-type-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .prayer-type-pill {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(212, 175, 55, 0.25);
+            color: #1f2a4d;
+            padding: 0.9rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+            cursor: pointer;
+        }
+
+        .prayer-type-pill.active,
+        .prayer-type-pill:hover {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.95), rgba(255, 223, 125, 0.95));
+            border-color: #d4af37;
+            color: #08142e;
+            transform: translateY(-2px);
+        }
+
+        .prayer-type-pill:focus-visible {
+            outline: 3px solid rgba(212, 175, 55, 0.35);
+            outline-offset: 3px;
+        }
+
+        .prayer-request-textarea,
+        .prayer-request-input {
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .prayer-request-input:focus,
+        .prayer-request-textarea:focus {
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18);
+            transform: translateY(-0.5px);
+        }
+
+        @media (max-width: 768px) {
+            .prayer-type-cards {
+                gap: 0.65rem;
+            }
+
+            .prayer-type-pill {
+                flex: 1 1 48%;
+                text-align: center;
+            }
+        }
+    </style>
+
     <script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
             document.querySelector('.mobile-menu')?.classList.toggle('hidden');
+        });
+
+        // Prayer request option selector
+        const prayerButtons = document.querySelectorAll('.prayer-type-pill');
+        const prayerInput = document.getElementById('request_type_input');
+
+        prayerButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                prayerButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                if (prayerInput) {
+                    prayerInput.value = button.dataset.value;
+                }
+            });
         });
     </script>
 </body>
