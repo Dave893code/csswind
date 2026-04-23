@@ -47,11 +47,10 @@
                 <a href="index.php?page=visit" class="bg-church-blue text-white px-8 py-3 rounded-full hover:bg-church-red transition-all shadow-lg shadow-blue-900/20">Plan Visit</a>
             </div>
 
-
-            <button class="md:hidden text-church-blue mobile-menu-button p-2">
+            <button class="md:hidden text-church-blue mobile-menu-button p-2" aria-expanded="false" aria-label="Open navigation menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
-            </button>       
+            </button>
         </div>
     </nav>
