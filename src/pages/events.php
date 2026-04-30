@@ -1,5 +1,5 @@
 <?php
-include('includes/db.php');
+include('src\includes\db.php');
 $events = mysqli_query($conn, "SELECT * FROM events WHERE event_date >= CURDATE() ORDER BY event_date ASC");
 ?>
 
