@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
     exit();
 }
 
-include('includes/db.php');
+include('src\includes\db.php');
 
 // Handle event creation
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['create_event'])) {

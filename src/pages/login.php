@@ -1,23 +1,40 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) session_start();
-include('includes/db.php');
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+
+include(dirname(__DIR__) . '/includes/db.php');
 
 $error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    
+    $username = $_POST['username'];
     $password = $_POST['password'];
-
-    $result = mysqli_query($conn, "SELECT * FROM admin_users WHERE username='$username'");
-    if ($row = mysqli_fetch_assoc($result)) {
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['admin_logged_in'] = true;
-            echo "<script>window.location.href='index.php?page=admin';</script>";
-            exit();
+    $stmt = mysqli_prepare($conn, "SELECT * FROM admin_users WHERE username = ?");
+    
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "s", $username);
+        
+        mysqli_stmt_execute($stmt);
+        
+        $result = mysqli_stmt_get_result($stmt);
+        
+        if ($row = mysqli_fetch_assoc($result)) {
+            
+            if (password_verify($password, $row['password'])) {
+                $_SESSION['admin_logged_in'] = true;
+                echo "<script>window.location.href='index.php?page=admin';</script>";
+                exit();
+            } else {
+                $error = "Invalid credentials.";
+            }
         } else {
-            $error = "Invalid credentials.";
+            $error = "Admin not found.";
         }
+        mysqli_stmt_close($stmt);
     } else {
-        $error = "Admin not found.";
+        $error = "Database query error.";
     }
 }
 ?>

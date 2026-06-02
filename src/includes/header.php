@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/output.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/csswind/src/assets/logo.JPG">
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
 <div id="preloader" class="fixed inset-0 z-[100] bg-church-blue flex flex-col items-center justify-center transition-opacity duration-700">
     <div class="relative">
@@ -30,27 +31,87 @@
 
 <body class="bg-church-cream font-sans antialiased">
 
-    <nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="/csswind/src/assets/logo.JPG" alt="Logo" class="h-12 w-12 rounded-full border border-gray-100">
-                <div class="flex flex-col">
-                    <span class="font-serif text-church-blue font-bold text-lg leading-none">Gloryland Chapel</span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-church-gold font-bold">Covenant Ministry</span>
-                </div>
+    <nav x-data="{ mobileMenuOpen: false }" class="w-full px-2 md:px-6 mt-4 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-md rounded-full shadow-2xl py-2 md:py-3 px-4 md:px-8 flex justify-between items-center border border-gray-200 relative">
+
+            <a href="index.php?page=home" class="flex items-center gap-2 md:gap-3 group shrink-0">
+                <div class="w-8 h-8 md:w-9 md:h-9 bg-church-blue text-white rounded-xl flex items-center justify-center text-lg md:text-lg font-bold shadow-lg">G</div>
+                <span class="text-lg md:text-xl font-bold tracking-tighter text-church-blue">Gloryland <span class="hidden sm:inline text-church-gold">Chapel</span></span>
+            </a>
+
+            <ul class="hidden lg:flex gap-6 font-semibold text-church-blue text-sm">
+                <li class="relative group">
+                    <a href="index.php?page=home" class="flex flex-col items-center gap-1.5 hover:text-church-gold transition">
+                        <i class="fas fa-house text-lg"></i>
+                        <span>Home</span>
+                    </a>
+                    <span class="absolute -bottom-1 left-0 w-0 h-1 bg-church-gold transition-all group-hover:w-full rounded-full"></span>
+                </li>
+                <li class="relative group">
+                    <a href="index.php?page=sermons" class="flex flex-col items-center gap-1.5 hover:text-church-gold transition">
+                        <i class="fas fa-microphone text-lg"></i>
+                        <span>Sermons</span>
+                    </a>
+                    <span class="absolute -bottom-1 left-0 w-0 h-1 bg-church-gold transition-all group-hover:w-full rounded-full"></span>
+                </li>
+                <li class="relative group">
+                    <a href="index.php?page=events" class="flex flex-col items-center gap-1.5 hover:text-church-gold transition">
+                        <i class="fas fa-calendar text-lg"></i>
+                        <span>Events</span>
+                    </a>
+                    <span class="absolute -bottom-1 left-0 w-0 h-1 bg-church-gold transition-all group-hover:w-full rounded-full"></span>
+                </li>
+                <li class="relative group">
+                    <a href="index.php?page=church" class="flex flex-col items-center gap-1.5 hover:text-church-gold transition">
+                        <i class="fas fa-gopuram text-lg"></i>
+                        <span>Church</span>
+                    </a>
+                    <span class="absolute -bottom-1 left-0 w-0 h-1 bg-church-gold transition-all group-hover:w-full rounded-full"></span>
+                </li>
+                <li class="relative group">
+                    <a href="index.php?page=school" class="flex flex-col items-center gap-1.5 hover:text-church-gold transition">
+                        <i class="fas fa-graduation-cap text-lg"></i>
+                        <span>School</span>
+                    </a>
+                    <span class="absolute -bottom-1 left-0 w-0 h-1 bg-church-gold transition-all group-hover:w-full rounded-full"></span>
+                </li>
+            </ul>
+
+            <div class="flex items-center gap-2 md:gap-4 shrink-0">
+                <a href="index.php?page=visit" class="hidden md:inline-block bg-church-blue text-white px-5 lg:px-7 py-2 md:py-2.5 rounded-full font-black text-xs lg:text-sm shadow-xl hover:bg-church-red transition-all transform hover:-translate-y-0.5 active:scale-95">Plan Visit</a>
+
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-church-blue focus:outline-none p-2">
+                    <svg x-show="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <svg x-show="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
 
-            <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest text-gray-600">
-                <a href="index.php?page=home" class="hover:text-church-gold transition-colors">Home</a>
-                <a href="index.php?page=sermons" class="hover:text-church-gold transition-colors">Sermons</a>
-                <a href="index.php?page=events" class="hover:text-church-gold transition-colors">Events</a>
-                <a href="index.php?page=visit" class="bg-church-blue text-white px-8 py-3 rounded-full hover:bg-church-red transition-all shadow-lg shadow-blue-900/20">Plan Visit</a>
+            <div x-show="mobileMenuOpen"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-4"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 -translate-y-4"
+                class="absolute top-full left-0 right-0 mt-3 mx-2 bg-white rounded-3xl p-6 shadow-2xl lg:hidden border border-gray-200"
+                style="display: none;">
+                <ul class="flex flex-col gap-4 font-bold text-church-blue text-sm">
+                    <li><a href="index.php?page=home" class="block py-2 hover:text-church-gold">Home</a></li>
+                    <li><a href="index.php?page=sermons" class="block py-2 hover:text-church-gold">Sermons</a></li>
+                    <li><a href="index.php?page=events" class="block py-2 hover:text-church-gold">Events</a></li>
+                    <li><a href="index.php?page=church" class="block py-2 hover:text-church-gold">Church</a></li>
+                    <li><a href="index.php?page=school" class="block py-2 hover:text-church-gold">School</a></li>
+                    <hr class="border-gray-200">
+                    <li><a href="index.php?page=visit" class="block py-2 text-center bg-church-blue text-white rounded-2xl">Plan Visit</a></li>
+                </ul>
             </div>
 
-            <button class="md:hidden text-church-blue mobile-menu-button p-2" aria-expanded="false" aria-label="Open navigation menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
         </div>
     </nav>
+
+    <!-- Page container start: constrains page content width with modest horizontal padding -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

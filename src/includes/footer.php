@@ -1,268 +1,81 @@
-<footer class="bg-[#08111e] pt-24 pb-12 px-4 md:px-16 text-[#f4efe3]">
+<footer class="bg-[var(--color-church-blue)] text-[var(--color-church-cream)] font-sans pt-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12">
 
-    <style>
-        .footer-shell {
-            background: #08111e;
-            color: #f4efe3;
-        }
-
-        .footer-panel {
-            border: 1px solid rgba(255, 238, 194, 0.14);
-            background: rgba(22, 17, 38, 0.78);
-            backdrop-filter: blur(14px);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
-        }
-
-        .footer-panel-light {
-            background: linear-gradient(160deg, rgba(227, 177, 89, 0.16), rgba(32, 18, 48, 0.92));
-            border-color: rgba(227, 177, 89, 0.35);
-        }
-
-        .footer-tag {
-            color: #e3cd97;
-            letter-spacing: 0.28em;
-            font-size: 0.72rem;
-        }
-
-        .footer-heading {
-            color: #f9f2dd;
-        }
-
-        .footer-copy {
-            color: rgba(244, 239, 227, 0.78);
-        }
-
-        .footer-link {
-            color: rgba(244, 239, 227, 0.76);
-        }
-
-        .footer-link:hover {
-            color: #e3cd97;
-        }
-
-        .footer-icon {
-            width: 3rem;
-            height: 3rem;
-            display: grid;
-            place-items: center;
-            border-radius: 1rem;
-            background: rgba(227, 177, 89, 0.15);
-            color: #e3cd97;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .footer-icon:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 22px 45px rgba(227, 177, 89, 0.18);
-        }
-
-        .footer-tile {
-            border-radius: 2rem;
-            padding: 2rem;
-        }
-
-        .footer-list li {
-            position: relative;
-            padding-left: 1.4rem;
-        }
-
-        .footer-list li::before {
-            content: '›';
-            position: absolute;
-            left: 0;
-            top: 0.15rem;
-            color: #e3cd97;
-        }
-
-        .newsletter-input {
-            background: rgba(232, 218, 178, 0.08);
-            border: 1px solid rgba(227, 177, 89, 0.2);
-            color: #f7f1e3;
-            padding-right: 14rem;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            border-color: #e3cd97;
-            background: rgba(232, 218, 178, 0.12);
-        }
-
-        .newsletter-submit {
-            position: absolute;
-            right: 0.75rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: linear-gradient(135deg, #e3cd97, #f4e6b2);
-            color: #151117;
-            min-width: 10rem;
-            padding: 0 1.75rem;
-        }
-
-        .newsletter-submit:hover {
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 640px) {
-            .newsletter-input {
-                padding-right: 1.5rem;
-            }
-
-            .newsletter-submit {
-                position: static;
-                width: 100%;
-                transform: none;
-                margin-top: 0.75rem;
-            }
-        }
-
-        .info-chip {
-            background: rgba(24, 17, 36, 0.85);
-            border: 1px solid rgba(227, 177, 89, 0.14);
-            padding: 1.2rem 1.4rem;
-            border-radius: 1.5rem;
-        }
-
-        .footer-glow {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-        }
-
-        .footer-glow-circle {
-            position: absolute;
-            border-radius: 9999px;
-            filter: blur(88px);
-            opacity: 0.32;
-        }
-
-        .social-pill {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 1rem;
-            display: grid;
-            place-items: center;
-            background: rgba(255, 238, 194, 0.08);
-            color: #f4efe3;
-            transition: transform 0.25s ease, background 0.25s ease;
-        }
-
-        .social-pill:hover {
-            transform: translateY(-2px);
-            background: rgba(227, 177, 89, 0.18);
-            color: #151117;
-        }
-    </style>
-
-    <div class="max-w-7xl mx-auto rounded-t-[60px] md:rounded-t-[100px] p-12 md:p-20 relative overflow-hidden footer-shell">
-
-        <div class="footer-glow">
-            <div class="footer-glow-circle left-0 top-10 w-72 h-72 bg-[#e3cd97]/20"></div>
-            <div class="footer-glow-circle right-10 top-24 w-80 h-80 bg-[#8dc9b9]/15"></div>
-            <div class="footer-glow-circle left-1/2 top-20 w-[24rem] h-[24rem] bg-[#d8b678]/10 translate-x-[-50%]"></div>
+        <div class="space-y-6 text-center lg:text-left">
+            <div>
+                <h2 class="text-3xl font-bold text-white font-serif tracking-tight">Gloryvine</h2>
+                <span class="block text-xs font-semibold text-[var(--color-church-gold)] uppercase tracking-widest mt-1">Covenant Ministry</span>
+            </div>
+            <p class="text-sm italic opacity-80 max-w-sm mx-auto lg:mx-0">
+                "Rooted in Faith, Growing in Grace, Impacting Our World."
+            </p>
+            <div class="pt-4 border-t border-white/10 lg:border-none">
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2 font-serif">Service Times</h4>
+                <p class="text-sm opacity-80">Sundays: 9:00 AM & 11:30 AM</p>
+                <p class="text-sm opacity-80">Wednesdays: 7:00 PM (Bible Study)</p>
+            </div>
         </div>
 
-        <div class="relative z-10 space-y-10">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div class="text-center lg:text-left">
+            <h3 class="text-lg font-semibold text-white font-serif mb-6 relative inline-block lg:block after:content-[''] after:block after:w-8 after:h-0.5 after:bg-[var(--color-church-gold)] after:mt-2 after:mx-auto lg:after:mx-0">
+                Quick Links
+            </h3>
+            <ul class="space-y-3 text-sm">
+                <li><a href="index.php?page=home" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Home</a></li>
+                <li><a href="index.php?page=vision" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">About Our Church</a></li>
+                <li><a href="index.php?page=sermons" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Watch Sermons</a></li>
+                <li><a href="index.php?page=events" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Upcoming Events</a></li>
+                <li><a href="#" class="text-[var(--color-church-red)] font-semibold hover:brightness-125 transition-all duration-200">Online Giving ❤️</a></li>
+            </ul>
+        </div>
 
-                <div class="footer-panel footer-tile">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="footer-icon shadow-lg">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <div>
-                            <p class="footer-tag uppercase">Gloryvine</p>
-                            <h3 class="text-2xl font-black footer-heading">Anointed Presence</h3>
-                        </div>
-                    </div>
-                    <p class="footer-copy text-sm leading-relaxed">
-                        A modern worship house where covenant truth meets powerful community and spiritual momentum.
-                    </p>
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-[#e3cd97] text-xl">✦</span>
-                            <p class="footer-copy text-sm">Weekly sermons with soul-stirring clarity.</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-[#8dc9b9] text-xl">⚡</span>
-                            <p class="footer-copy text-sm">Prayer alerts & encouragements delivered fast.</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-[#e3cd97] text-xl">✞</span>
-                            <p class="footer-copy text-sm">A covenant family rooted in grace and truth.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="text-center lg:text-left">
+            <h3 class="text-lg font-semibold text-white font-serif mb-6 relative inline-block lg:block after:content-[''] after:block after:w-8 after:h-0.5 after:bg-[var(--color-church-gold)] after:mt-2 after:mx-auto lg:after:mx-0">
+                Ministries
+            </h3>
+            <ul class="space-y-3 text-sm">
+                <li><a href="index.php?page=vision" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Children & Youth</a></li>
+                <li><a href="index.php?page=home" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Worship & Arts</a></li>
+                <li><a href="index.php?page=events" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Missions & Outreach</a></li>
+                <li><a href="index.php?page=history" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Men's Fellowship</a></li>
+                <li><a href="index.php?page=visit" class="hover:text-[var(--color-church-gold)] transition-colors duration-200">Women of Covenant</a></li>
+            </ul>
+        </div>
 
-                <div class="footer-panel footer-tile footer-panel-light">
-                    <h4 class="text-[#2d1f2c] font-black text-lg mb-8 tracking-[0.22em] uppercase">Explore</h4>
-                    <ul class="footer-list space-y-4 text-sm font-semibold">
-                        <li><a href="index.php" class="footer-link">Home Sanctuary</a></li>
-                        <li><a href="index.php?page=history" class="footer-link">Our History</a></li>
-                        <li><a href="#" class="footer-link">Ministries</a></li>
-                        <li><a href="#" class="footer-link">Give / Tithe</a></li>
-                    </ul>
-                    <div class="mt-10">
-                        <h5 class="text-[#e3cd97] font-black text-sm uppercase tracking-[0.25em] mb-4">Support</h5>
-                        <ul class="footer-list space-y-3 text-sm font-semibold">
-                            <li><a href="#" class="footer-link">Contact Us</a></li>
-                            <li><a href="#" class="footer-link">Prayer Request</a></li>
-                            <li><a href="#" class="footer-link">Counseling</a></li>
-                            <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-panel footer-tile">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="footer-icon shadow-lg" style="background: rgba(141, 201, 185, 0.18); color: #8dc9b9;">
-                            <i class="fas fa-paper-plane"></i>
-                        </div>
-                        <div>
-                            <p class="footer-tag uppercase">Stay Informed</p>
-                            <h3 class="text-2xl font-black footer-heading">Join the Covenant Pulse</h3>
-                        </div>
-                    </div>
-                    <p class="footer-copy text-sm leading-relaxed mb-8">
-                        Subscribe for exclusive updates, event invitations and prayer alerts delivered with care.
-                    </p>
-                    <form action="src/includes/process_newsletter.php" method="POST" class="space-y-4">
-                        <label class="block text-[#e3cd97] text-xs uppercase tracking-[0.28em]">Email Address</label>
-                        <div class="relative">
-                            <input type="email" name="email" placeholder="name@example.com" required class="newsletter-input w-full rounded-full py-4 px-6 text-[#f4efe3] placeholder:text-[#f4efe3]/60 transition-all" />
-                            <button type="submit" class="newsletter-submit absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full px-5 py-3 font-bold uppercase tracking-[0.18em] shadow-lg transition-all">
-                                <span>Send</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                        <?php if (isset($_GET['newsletter']) && $_GET['newsletter'] === 'success'): ?>
-                            <p class="text-emerald-300 text-sm">Thank you! You have been subscribed.</p>
-                        <?php elseif (isset($_GET['newsletter']) && $_GET['newsletter'] === 'invalid'): ?>
-                            <p class="text-rose-300 text-sm">Please enter a valid email address.</p>
-                        <?php elseif (isset($_GET['newsletter']) && $_GET['newsletter'] === 'error'): ?>
-                            <p class="text-rose-300 text-sm">Unable to send subscription email. Please try again later.</p>
-                        <?php endif; ?>
-                    </form>
-                </div>
+        <div class="text-center lg:text-left space-y-4">
+            <h3 class="text-lg font-semibold text-white font-serif mb-6 relative inline-block lg:block after:content-[''] after:block after:w-8 after:h-0.5 after:bg-[var(--color-church-gold)] after:mt-2 after:mx-auto lg:after:mx-0">
+                Get in Touch
+            </h3>
+            <div class="text-sm space-y-2 opacity-80">
+                <p><strong class="text-white font-medium">Address:</strong> 123 Blessing Grace Way, City, State</p>
+                <p><strong class="text-white font-medium">Phone:</strong> (555) 123-4567</p>
+                <p><strong class="text-white font-medium">Email:</strong> info@gloryvine.org</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-8 bg-[#111826]/90 rounded-[32px] border border-[#e3cd97]/10">
-                <div class="info-chip">
-                    <p class="text-[#e3cd97] uppercase text-[0.65rem] tracking-[0.4em]">Headquarters</p>
-                    <p class="footer-copy text-sm">15 Olafimihan Street, Fadegbuwa, Ogijo, Ogun, Nigeria.</p>
-                </div>
-                <div class="info-chip">
-                    <p class="text-[#e3cd97] uppercase text-[0.65rem] tracking-[0.4em]">Prayer Line</p>
-                    <p class="footer-copy text-sm">+234 123 456 7890</p>
-                </div>
-                <div class="info-chip">
-                    <p class="text-[#e3cd97] uppercase text-[0.65rem] tracking-[0.4em]">Office Email</p>
-                    <p class="footer-copy text-sm">info@gloryvinecovenant.org</p>
-                </div>
+            <div class="flex justify-center lg:justify-start space-x-4 pt-4">
+                <a href="#" class="p-2 bg-white/5 rounded-full text-[var(--color-church-cream)] hover:text-white hover:bg-[var(--color-church-red)] transition-all duration-200 transform hover:-translate-y-1" aria-label="Facebook">🌐</a>
+                <a href="#" class="p-2 bg-white/5 rounded-full text-[var(--color-church-cream)] hover:text-white hover:bg-[var(--color-church-red)] transition-all duration-200 transform hover:-translate-y-1" aria-label="Instagram">📸</a>
+                <a href="#" class="p-2 bg-white/5 rounded-full text-[var(--color-church-cream)] hover:text-white hover:bg-[var(--color-church-red)] transition-all duration-200 transform hover:-translate-y-1" aria-label="YouTube">📺</a>
+                <a href="#" class="p-2 bg-white/5 rounded-full text-[var(--color-church-cream)] hover:text-white hover:bg-[var(--color-church-red)] transition-all duration-200 transform hover:-translate-y-1" aria-label="Podcast">🎙️</a>
             </div>
+        </div>
 
-            <div class="pt-10 border-t border-[#e3cd97]/10 text-center">
-                <p class="text-[#f4efe3]/60 text-[10px] font-bold uppercase tracking-[0.4em]">© <?php echo date('Y'); ?> Gloryvine Covenant Ministry. All rights reserved.</p>
+    </div>
+
+    <?php if (isset($page) && $page !== 'home') echo '</div>'; // close page container for routed pages 
+    ?>
+
+    <div class="bg-black/20 border-t border-white/10 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs opacity-60">
+            <p>&copy; 2026 Gloryvine Covenant Ministry. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
             </div>
         </div>
     </div>
 </footer>
+</body>
+
+</html>
